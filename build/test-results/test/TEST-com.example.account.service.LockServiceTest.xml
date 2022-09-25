@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.account.service.LockServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-09-25T14:20:17" hostname="choetaehun-ui-MacBookPro.local" time="0.149">
+  <properties/>
+  <testcase name="failGetLock()" classname="com.example.account.service.LockServiceTest" time="0.146"/>
+  <testcase name="successGetLock()" classname="com.example.account.service.LockServiceTest" time="0.002"/>
+  <system-out><![CDATA[2022-09-25 23:20:17.173 ERROR 84375 --- [    Test worker] com.example.account.service.LockService  : ======Lock acquisition failed=====
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

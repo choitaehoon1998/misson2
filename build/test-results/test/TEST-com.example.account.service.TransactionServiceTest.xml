@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.account.service.TransactionServiceTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2022-09-25T14:20:17" hostname="choetaehun-ui-MacBookPro.local" time="0.099">
+  <properties/>
+  <testcase name="해당 계좌 없음 - 잔액 사용 실패" classname="com.example.account.service.TransactionServiceTest" time="0.053"/>
+  <testcase name="해당 계좌 없음 - 잔액 사용 취소 실패" classname="com.example.account.service.TransactionServiceTest" time="0.002"/>
+  <testcase name="계좌 소유주 다름 - 잔액 사용 실" classname="com.example.account.service.TransactionServiceTest" time="0.003"/>
+  <testcase name="successUseBalance()" classname="com.example.account.service.TransactionServiceTest" time="0.002"/>
+  <testcase name="해당 유저 없음 - 잔액 생성 실패" classname="com.example.account.service.TransactionServiceTest" time="0.001"/>
+  <testcase name="원 사용 거래 없음 -  잔액 사용 취소 실패" classname="com.example.account.service.TransactionServiceTest" time="0.002"/>
+  <testcase name="거래 금액이 잔액보다 클경우" classname="com.example.account.service.TransactionServiceTest" time="0.003"/>
+  <testcase name="해지 계좌는 사용할 수 없다" classname="com.example.account.service.TransactionServiceTest" time="0.002"/>
+  <testcase name="successQueryTransaction()" classname="com.example.account.service.TransactionServiceTest" time="0.001"/>
+  <testcase name="취소는 1년까지만 가능 - 잔액 사용 취소 실패" classname="com.example.account.service.TransactionServiceTest" time="0.002"/>
+  <testcase name="원거래 없음 - 거래 조회 실패" classname="com.example.account.service.TransactionServiceTest" time="0.003"/>
+  <testcase name="거래금액과 취소 금액이 다름 - 잔액 사용 취소 실패" classname="com.example.account.service.TransactionServiceTest" time="0.004"/>
+  <testcase name="실패 트랜잭션 저장 성공" classname="com.example.account.service.TransactionServiceTest" time="0.005"/>
+  <testcase name="거래와 계좌가 매칭되지 않음 - 잔액 사용 취소 실패" classname="com.example.account.service.TransactionServiceTest" time="0.003"/>
+  <testcase name="successCancelBalance()" classname="com.example.account.service.TransactionServiceTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
