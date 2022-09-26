@@ -3,8 +3,10 @@ package com.example.account.controller;
 import com.example.account.dto.CreateAccount;
 import com.example.account.dto.DeleteAccount;
 import com.example.account.dto.AccountDto;
+import com.example.account.exception.AccountException;
 import com.example.account.type.AccountStatus;
 import com.example.account.service.AccountService;
+import com.example.account.type.ErrorCode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -105,5 +107,16 @@ class AccountControllerTest {
                 .andExpect(jsonPath("$[2].accountNumber").value("1234567892"))
                 .andExpect(jsonPath("$[2].balance").value(1003L));
 
+    }
+    @Test
+    void failGetAccount() throws Exception {
+        given(accountService.getAccountByUserId(anyLong()))
+                .willThrow(new AccountException(ErrorCode.ACCOUNT_NOT_FOUND));
+
+        mockMvc.perform(get("/account/?user_id=1"))
+                .andDo(print())
+                .andExpect(jsonPath("$.errorCode").value("ACCOUNT_NOT_FOUND"))
+                .andExpect(jsonPath("$.errorMessage").value("계좌가 없습니다"))
+                .andExpect(status().isOk());
     }
 }

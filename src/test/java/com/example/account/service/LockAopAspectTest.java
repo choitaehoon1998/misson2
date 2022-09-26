@@ -46,7 +46,7 @@ class LockAopAspectTest {
     }
 
     @Test
-    void lockAndUnlock_evenIf() throws Throwable {
+    void lockAndUnlock_evenIfThrow() throws Throwable {
 
         ArgumentCaptor<String> lockArgumentCaptor = ArgumentCaptor.forClass(String.class);
         ArgumentCaptor<String> unLockArgumentCaptor = ArgumentCaptor.forClass(String.class);
